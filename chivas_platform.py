@@ -4,6 +4,14 @@ from flask_login import LoginManager, login_user, login_required, logout_user, c
 from werkzeug.security import generate_password_hash, check_password_hash
 import pandas as pd
 import io
+import sys
+# Add your project directory to the sys.path
+project_home = '/home/ApoorvBasher/Chivas-St'
+if project_home not in sys.path:
+    sys.path = [project_home] + sys.path
+
+# Import your Flask app
+from chivas_platform import app as application
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  
