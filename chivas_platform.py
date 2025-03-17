@@ -6,18 +6,18 @@ import pandas as pd
 import io
 import sys
 # Add your project directory to the sys.path
-project_home = '/home/ApoorvBasher/Chivas-St'
+
+
+app = Flask(__name__)
+app.secret_key = 'your_secret_key'  
+project_home = '/home/ApoorvBasher/Chivas-St/chivas_platform.py'
 if project_home not in sys.path:
     sys.path = [project_home] + sys.path
 
 # Import your Flask app
 from chivas_platform import app as application
-
-app = Flask(__name__)
-app.secret_key = 'your_secret_key'  
-
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_HOST'] = 'yourusername.mysql.pythonanywhere-services.com'
+app.config['MYSQL_USER'] = 'ApoorvBasher'
 app.config['MYSQL_PASSWORD'] = 'ApoorvGRT@2024'
 app.config['MYSQL_DB'] = 'chivas_db'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
