@@ -10,12 +10,12 @@ import sys
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  
-project_home = '/home/ApoorvBasher/Chivas-St/chivas_platform.py'
+project_home = '/home/ApoorvBasher/Chivas-St/'
 if project_home not in sys.path:
     sys.path = [project_home] + sys.path
 
 # Import your Flask app
-from chivas_platform import app as application
+from chivas_platform import app as app
 app.config['MYSQL_HOST'] = 'yourusername.mysql.pythonanywhere-services.com'
 app.config['MYSQL_USER'] = 'ApoorvBasher'
 app.config['MYSQL_PASSWORD'] = 'ApoorvGRT@2024'
