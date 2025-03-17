@@ -14,7 +14,7 @@ app.secret_key = 'your_secret_key'
 app.config['MYSQL_HOST'] = 'yourusername.mysql.pythonanywhere-services.com'
 app.config['MYSQL_USER'] = 'ApoorvBasher'
 app.config['MYSQL_PASSWORD'] = 'ApoorvGRT@2024'
-app.config['MYSQL_DB'] = 'chivas_db'
+app.config['MYSQL_DB'] = 'ApoorvBasher$chivas_db'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 mysql = MySQL(app)
